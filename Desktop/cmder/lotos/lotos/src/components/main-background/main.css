@@ -1,0 +1,281 @@
+body, div, ul, li, h1, h2,h3,h4, p,span,dd,dt,dl {
+    margin:0px;
+    padding:0px;
+}
+ul, li {
+    list-style: none;
+}
+span {
+    display: block;
+    cursor: pointer;
+}
+.hide {
+    display: none;
+}
+:root {
+ --main-color: #fbf5f4;
+ --text-orange-color: #f88d6c;
+ --font-main: 'Montserrat', sans-serif;
+}
+.page-main,
+.clasess,
+.form,
+.treners-list,
+.abonements,
+.table,
+.reviews-container,
+.contacts-container {
+    opacity:0.1;
+    transition: 0.8s; 
+    animation: show 3s 1; 
+    animation-fill-mode: forwards; 
+    animation-delay: 0s;
+}
+@keyframes show{
+    0% {
+      opacity:0.1;
+    }
+    100% {
+    opacity:1;
+    }
+}
+/*=======================================*/
+body {
+    background-color: var(--main-color);
+    font-family: var(--font-main);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#root {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+@media (max-width: 1536px) {
+    .slides-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 87vh;
+}
+.left-bar,
+.right-bar {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.right-bar {
+    align-items: flex-end;
+}
+.tel {
+    white-space: nowrap;
+}
+.menu-item {
+    font-size: 18px;
+    padding-left: 30px;
+    background: url('./img/image2vector.svg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 10%;
+}
+.pagination {
+    color:var(--text-orange-color);
+    text-align: right;
+}
+.current-slide {
+    font-size: 72px;
+}
+.count-slides {
+    font-size: 30px;
+}
+.social-icon {
+    display: flex;
+    justify-content: space-between;
+    flex-direction:row;
+    width: 100px;
+}
+.social-icon > a {
+    display: block;
+    width: max-content;
+    text-decoration: none;
+    color:black;
+}
+.social-icon > a:hover {
+    cursor: pointer;
+}
+.right-bar {
+    text-align: right;
+}
+.name-next-slide {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: max-content;
+    cursor: pointer;
+}
+.arrow-down {
+    position: relative;
+    margin-left: 10px;
+    border-radius: 50%;
+    background-color: var(--text-orange-color);
+    background-image:  -webkit-linear-gradient( 90deg, rgba(247,142,106,0) 0%, rgb(252,102,162) 100%, rgb(252,102,162) 100%, rgb(252,102,162) 100%);
+    width: 30px;
+    height: 30px;
+} 
+.trigon {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 13px;
+    border: 3px solid transparent;	
+    border-top: 3px solid #ffffff;
+}
+.logo {
+    background-image: url("./img/lotoezolan.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 30px;
+}
+.slides-container {
+   /*min-width: 84%;*/
+
+    width:90%;
+    height: 100%;
+    text-align: center;
+}
+.name-current-slide {
+    font-size: 18px;
+    font-weight: normal;
+    padding-left: 20px;
+    position: relative;
+    width: max-content;
+    margin: auto;
+}
+.name-current-slide::before {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    top: 9px;
+    left: 7px;
+    border-radius: 50%;
+    background-color: rgb(247, 142, 106);
+}
+.slides-container,
+.left-bar,
+.right-bar {
+    position: relative;
+    overflow: visible;
+}
+.left-bar,
+.right-bar {
+    z-index: 0;
+}
+.slides-container {
+    z-index: 30;
+}
+@media (min-width:760px) and (max-width:1366px) {
+    .main {
+        flex-direction: column;
+    }
+    .top-bar,
+    .bottom-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    
+    body,
+    #root {
+        overflow: hidden;
+    }
+    .current-slide {
+        line-height: 60px;
+    }
+}
+@media (max-width:760px) and (orientation:portrait) {
+    .main {
+        height: 95vh;
+    }
+}
+@media (max-width:760px) {
+    .main {
+        flex-direction: column;
+    }
+    .top-bar,
+    .bottom-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .slides-container {
+        width: 100%;
+    }
+    .current-slide {
+        font-size: 30px!important;
+    }
+    .count-slides {
+        font-size: 14px!important;
+    }
+    .social-icon {
+        font-size: 10px;
+    }
+    .arrows-container {
+        position: absolute;
+        width: 70px;
+        height: 32px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .bottom-bar {
+        flex-direction: row-reverse;
+    }
+    .tel {
+        display: none;
+    }
+    .arrow-right,
+    .arrow-left {
+        position: relative;
+        border-radius: 50%;
+        background-color: var(--text-orange-color);
+        background-image: -webkit-linear-gradient( 90deg, rgba(247,142,106,0) 0%, rgb(252,102,162) 100%, rgb(252,102,162) 100%, rgb(252,102,162) 100%);
+        width: 30px;
+        height: 30px;
+    }
+    .trigon-right {
+        display: block;
+        position: absolute;
+        top: 12px;
+        left: 9px;
+        border: 4px solid transparent;
+        border-right: 4px solid #ffffff;
+    }
+    .trigon-left {
+        display: block;
+        position: absolute;
+        top: 12px;
+        left: 13px;
+        border: 4px solid transparent;
+        border-left: 4px solid #ffffff;
+    }
+    .menu-item {
+        color: transparent;
+        background-size: 20%;
+    }
+}

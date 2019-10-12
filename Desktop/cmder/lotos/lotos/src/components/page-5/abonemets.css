@@ -1,0 +1,162 @@
+.abonements {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+
+    background-image: url('./img/05.png');
+    background-repeat: no-repeat;
+    background-size: 35%;
+    background-position: 5% 60%;
+}
+.table-of-abonements {
+    width: 565px;
+    height: 430px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.abonement-item {
+    background-color: #ffffff;
+    height: 140px;
+    width: 280px;
+    font-size: 18px;
+    position: relative;
+}
+.not-visible {
+    display: block;
+    width: 0px;
+    height: 0px;
+}
+.abonement-price > strong {
+    font-size: 24px;
+}
+.label-abonement {
+    opacity: 0.8;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    color: #c9c4c3;
+}
+.label-abonement:after {
+    position: absolute;
+    content: "+";
+    border-radius: 50%;
+    background-color: rgb(251, 245, 244);
+    width: 40px;
+    height: 40px;
+    top: -8px;
+    right: 1px;
+    z-index: -1;
+    line-height: 39px;
+}
+.input-abon:checked + .label-abonement:after {
+    color: #ffffff;
+    background-image: -moz-linear-gradient( 0deg, rgb(247,142,106) 0%, rgb(252,102,162) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(247,142,106) 0%, rgb(252,102,162) 100%);
+    background-image: linear-gradient( 0deg, rgb(247,142,106) 0%, rgb(252,102,162) 100%);
+}
+.abonemet-name,
+.abonement-price,
+.label-abonement {
+    position: absolute;
+}
+.abonemet-name {
+    top:40px;
+    left:40px;
+}
+.abonement-price {
+    left:40px;
+    top:77px;
+}
+.label-abonement {
+    top:47px;
+    right: 20px;
+}
+.order-button {
+    position: relative;
+    margin-right: 275px;
+    border: none;
+    color:#ffffff;
+    border-radius: 29px;
+    background-color: rgb(247, 142, 106);
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
+    width: 291px;
+    height: 60px;
+    font-size: 16px;
+    padding: 20px;
+    padding-left: 40px;
+}
+.order-button:before {
+    border-radius: 50%;
+    background-image: -moz-linear-gradient( 0deg, rgba(247,142,106,0) 0%, rgb(252,102,162) 100%, rgb(252,102,162) 100%, rgb(252,102,162) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgba(247,142,106,0) 0%, rgb(252,102,162) 100%, rgb(252,102,162) 100%, rgb(252,102,162) 100%);
+    background-image: linear-gradient( 0deg, rgba(247,142,106,0) 0%, rgb(252,102,162) 100%, rgb(252,102,162) 100%, rgb(252,102,162) 100%);
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+
+    top: 0px;
+    left: 0px;
+}
+.order-button:after {
+    position: absolute;
+    content: "✓";
+    font-family: Arial, Helvetica, sans-serif;
+    top: 19px;
+    left: 27px;
+}
+@media (min-width:760px) and (max-width:1366px) {
+    .abonements {
+        background: none;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        overflow: hidden;
+    }
+    .abonements::after {
+        position: absolute;
+        content: "";
+        width: 200px;
+        height: 400px;
+        background:url("./img/05.png") no-repeat;
+        background-size: contain;
+        transform: scale(-1,1);
+        z-index:-2;
+    }
+    .order-button {
+        margin-top: 20px;
+    }
+}
+@media (orientation:portrait) {
+    .abonements {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        overflow: hidden;
+    }
+    .abonements::after {
+        position: absolute;
+        content: "";
+        width: 200px;
+        height: 400px;
+        background:url("./img/05.png") no-repeat;
+        background-size: contain;
+        transform: scale(-1,1);
+        z-index:-2;
+    }
+}
+@media (orientation:portrait) and (max-width:760px) {
+    .abonements {
+        justify-content: space-around;
+        overflow-x: scroll;
+        overflow-y: visible;
+    }
+}

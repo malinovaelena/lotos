@@ -1,0 +1,179 @@
+.reviews-container {
+    width: 100%;
+    height: auto;
+    background: url(/static/media/07.588a4842.png) no-repeat;
+    background-size: 55% auto;
+    background-position: bottom left;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.names-persons-list {
+    width: max-content;
+    height: max-content;
+    font-size: 18px;
+    font-family: "Myriad Pro";
+    color: rgba(0, 0, 0, 0.502);
+    line-height: 1.667;
+    text-align: left;
+}
+.review-block {
+    width:570px;
+    max-height: 70%;
+}
+.item-name-person.active:before {
+    content: "Client --";
+    left: -70px;
+}
+
+.review-block {
+    text-align: left;
+}
+.name-person {
+        font-size: 30px;
+        font-family: "Myriad Pro";
+        color: rgb(1, 1, 1);
+        line-height: 0.8;
+}
+.age-person {
+        font-size: 18px;
+        color: rgb(0, 0, 0);
+        line-height: 1.333;
+}
+.persons-comment {
+        font-size: 18px;
+        color: rgb(0, 0, 0);
+        line-height: 1.667;
+}
+.person-data {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    height: 180px;
+    width: max-content;
+
+    margin-bottom: 20px;
+}
+.persons-comment {
+    width: 570px;
+}
+.person-photo {
+    width:180px;
+    height: 180px;
+    margin-right: 20px;
+}
+.try-it-button {
+    margin-top: 50px;
+}
+@media (max-width:1580px) {
+    .reviews-container {
+        padding-top: 50px;
+        padding-left: 60px;
+    }
+    .names-persons-list {
+        padding-left: 50px;
+    }
+    .persons-comment {
+        line-height: 1.875;
+        font-size: 16px;
+    }
+}
+
+@media (max-width:1025px) {
+    .reviews-container {
+        padding-top: 50px;
+        padding-bottom: 0px;
+        background-size: 40%;
+    }
+    .person-data {
+        height: 120px;
+    }
+    .person-photo {
+        height: 120px;
+        width: 120px;
+    }
+}
+@media (orientation:portrait) {
+    .reviews-container {
+        flex-direction: row-reverse;
+        background-size: 70%;
+        background-position: right bottom;
+        padding-bottom: 136px;
+    }
+    .review-block {
+        width: 500px;
+        padding-top: 3px;
+    }
+    .persons-comment {
+        display: block;
+        white-space: normal;
+        width: 100%;
+    }
+    .names-persons-list {
+        width: 250px;
+        line-height: 1.667;
+    }
+}
+.try-it-button:hover {
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
+}
+.age-person {
+    margin-top: 8px;
+    line-height: 0.9;
+}
+@media (max-width:765px) {
+    .reviews-container {
+        background:none;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        padding-left: 0px;
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .review-block {
+        width: 100%!important;
+        height: auto;
+    }
+    .names-persons-list {
+        position: relative;
+    }
+    .ul-persons-list {
+        display: none;
+    }
+    .persons-navigation {
+        bottom: -170px;
+        right: -250px;
+    }
+    .person-data {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .persons-comment {
+        height: 200px;
+        overflow-y: scroll;
+    }
+    .person-data {
+        height: 250px;
+        width: 260px;
+        justify-content: space-evenly;
+    }
+    .person-photo {
+        width: 160px;
+        height: 160px;
+    }
+    .try-it-button {
+        margin-top: 20px;
+    }
+    .names-persons-list {
+        width:0px;
+        height: 0px;
+        padding:0px;
+        margin:0px;
+    }
+}

@@ -1,0 +1,121 @@
+.clasess {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width:100%;
+    height: 75%;
+    padding-top: 150px;
+    text-align: left;
+
+    background: url("./img/02.png") no-repeat;
+    background-size: 25%;
+    background-position-y: center;
+    background-position-x: 34%;
+}
+.clasess-navigation {
+    width: max-content;
+}
+.clasess-description {
+    width: 45%;
+}
+.classes-title {
+    font-size: 48px;
+    line-height: 30px;
+    margin-bottom: 15px;
+    color: var(--text-orange-color);
+}
+.clasess-list {
+    margin-left: 60px;
+}
+.clasess-list-item {
+    margin-bottom: 25px;
+    color: rgba(0, 0, 0, 0.502);
+}
+.active {
+    color: rgb(0, 0, 0);
+    position: relative;
+}
+.active:before {
+    position: absolute;
+    content: "Yoga —";
+    font-size: 18px;
+    color: var(--text-orange-color);
+    top:-3px;
+    left: -80px;
+}
+.class-title {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+.class-description {
+    margin-bottom: 50px;
+}
+@media (max-width:1024px) {
+    .class-description {
+        font-size: 16px;
+    }
+    .add-to {
+        font-size: 16px;
+    }
+}
+@media (max-width:760px) {
+    .clasess-navigation {
+        display: none;
+    }
+    .clasess {
+        background: none;
+    }
+    .clasess-description {
+        width: 100%;
+    } 
+}
+@media (orientation:portrait) {
+    .clasess {
+        flex-direction: row-reverse;
+        background-position: bottom right;
+
+        height: 100%;
+        padding-top: 100px;
+    }
+}
+.add-to {
+    border-radius: 29px;
+    background-color: rgb(247, 142, 106);
+    box-shadow: 11.314px 11.314px 50px 0px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    height: 58px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    position: relative;
+    padding-left: 30px;
+
+}
+.add-to:before {
+    content: "+";
+    font-size: 25px;
+    position: absolute;
+    top: 14px;
+    left: 24px;
+    z-index: 5;
+}
+.add-to:after {
+    content: "";
+    border-radius: 50%;
+    top: 0px;
+    left: 0px;
+    background-image: -moz-linear-gradient( 0deg, rgba(247,142,106,0) 0%, rgb(252,102,162) 100%, rgb(252,102,162) 100%, rgb(252,102,162) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgba(247,142,106,0) 0%, rgb(252,102,162) 100%, rgb(252,102,162) 100%, rgb(252,102,162) 100%);
+    background-image: linear-gradient( 0deg, rgba(247,142,106,0) 0%, rgb(252,102,162) 100%, rgb(252,102,162) 100%, rgb(252,102,162) 100%);
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    opacity:1; /*Элемент полностью прозрачный (невидимый)*/
+    transition: 1s;
+}
+.add-to:hover {
+    opacity:1; /*Элемент полностью прозрачный (невидимый)*/
+    transition: 1s;
+    box-shadow: 11.314px 11.314px 50px 0px rgba(0, 0, 0, 0.2);
+}

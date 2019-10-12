@@ -1,0 +1,67 @@
+.slides-container {
+    width: 80%;
+    overflow: hidden;
+    height: 100%;
+    text-align: center;
+}
+.table {
+    margin-top: 20px;
+    width: 90%;
+    height: 100%;
+    margin:auto;
+    overflow: scroll;
+    -ms-overflow-style: none;
+}
+.shedule-table {
+    width: 1420px;
+    height: 620px;
+    margin-top: 50px;
+}
+tbody, table {
+    -ms-overflow-style: none;
+}
+@media (min-width:1024px) and (max-width:1537px) {
+    .table {
+        width: 75vw;
+        display: flex;
+        align-items: center;
+    }
+    
+}
+@media (min-width:1024px) {
+    .table {
+        width: 75vw;
+        display: flex;
+        align-items: center;
+    }
+    .shedule-table {
+        margin-top:0px;
+    }
+}
+
+.table::-webkit-scrollbar { 
+    width: 0; 
+}
+
+td {
+    background-color: #ffffff;
+    min-width: 202px;
+    width: 202px;
+    height: 76px;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: capitalize;
+}
+.day-of-week {
+    color: #f78e6a;
+    
+    font-weight: bold;
+}
+.test-strole,
+.test-strole > tr {
+    max-height: 76px;
+}
+.shedule-table__string {
+    max-height: 50px;
+}
