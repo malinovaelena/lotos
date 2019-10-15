@@ -1,3 +1,3 @@
-import Form from './form.js';
+import {Form,FormTwo} from './form.js';
 
-export default Form;
+export default {Form ,FormTwo};

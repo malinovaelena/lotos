@@ -22,7 +22,7 @@ tbody, table {
 }
 @media (min-width:1024px) and (max-width:1537px) {
     .table {
-        width: 75vw;
+        width: 70vw;
         display: flex;
         align-items: center;
     }
@@ -30,7 +30,7 @@ tbody, table {
 }
 @media (min-width:1024px) {
     .table {
-        width: 75vw;
+        width: 70vw;
         display: flex;
         align-items: center;
     }

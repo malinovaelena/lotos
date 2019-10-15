@@ -39,6 +39,74 @@ span {
     opacity:1;
     }
 }
+.not-visibleee {
+    opacity: 0;
+}
+.nav-menu-list {
+    position: absolute;
+    z-index: 10;
+    top: 1px;
+    left: 40px;
+}
+.nav-menu-list > li {
+    padding-bottom: 10px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.nav-menu-list > li:hover {
+    opacity: 1;
+}
+.burger-menu {
+    width:18px;
+    height: 18px;
+    background: url("./img/image2vector.svg") no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+    opacity: 1!important;
+    top:0px;
+    left:0px;
+    margin-right: 20px;
+}
+@media (orientation:portrait) and (max-width:1025px) {
+    .nav-menu-list {
+        top: 76px;
+        left: 77px;
+    }
+}
+@media (max-width:1025px) {
+    .nav-menu-list {
+        top: 58px;
+        left: 89px;
+        z-index: 50;
+    }
+    .nav-menu-list > li {
+        padding-bottom: 5px;
+    }
+}
+@media (max-width:720px) {
+    .nav-menu-list {
+        z-index: 70;
+        width: 100vw;
+        height: 100vh;
+        top: 0px;
+        left: 0px;
+        background-color:rgba(250, 255, 253, 0.79);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-menu-list > li {
+       padding-bottom: 20px;
+       font-size: 24px;
+    }
+}
+.close-mobile-burger {
+    position: absolute;
+    top: 23px;
+    left: 21px;
+}
 /*=======================================*/
 body {
     background-color: var(--main-color);
@@ -86,11 +154,8 @@ body {
 }
 .menu-item {
     font-size: 18px;
-    padding-left: 30px;
-    background: url('./img/image2vector.svg');
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size: 10%;
+    
+    display: inline-flex;
 }
 .pagination {
     color:var(--text-orange-color);
@@ -153,8 +218,6 @@ body {
     height: 30px;
 }
 .slides-container {
-   /*min-width: 84%;*/
-
     width:90%;
     height: 100%;
     text-align: center;
@@ -278,4 +341,7 @@ body {
         color: transparent;
         background-size: 20%;
     }
+}
+.hide {
+    display: none;
 }

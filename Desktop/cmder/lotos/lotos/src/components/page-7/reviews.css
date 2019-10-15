@@ -1,6 +1,6 @@
 .reviews-container {
     width: 100%;
-    height: auto;
+    height: 100%;
     background: url(/static/media/07.588a4842.png) no-repeat;
     background-size: 55% auto;
     background-position: bottom left;
@@ -10,6 +10,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+}
+@media (min-width:1600px) {
+    .reviews-container {
+        justify-content: space-around;
+    }
 }
 .names-persons-list {
     width: max-content;
