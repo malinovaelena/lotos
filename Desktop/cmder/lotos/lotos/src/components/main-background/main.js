@@ -10,9 +10,6 @@ import Reviews from '../page-7/reviews';
 import Contacts from '../page-8/contacts';
 
 import './main.css';
-//ЧТО ОСТАЛОСЬ ПО САЙТУ?
-//МЕЛКИЕ ДОРАБОТКИ ДИЗАЙНА - В САМОМ КОНЦЕ! ???????????????
-//ПОПРОБОВАТЬ РАЗОБРАТЬСЯ В БЭКЕ. ????????
 
 import lotoezolan from './img/lotosEzolan.svg';
 
@@ -23,8 +20,6 @@ export default class Main extends React.Component {
         this.MAX_WIDTH_FOR_MOBILE_DEVICES = 1366;
         this.presentation = [<PageMain/>,<Classes/>,<Form/>,<TrenersList/>,<Abonemets/>,<SheduleTable/>,<Reviews/>,<FormTwo/>,<Contacts/>];
         this.arrNamesOfSlides = ['Добро пожаловать','Направления и классы','Пробное занятие',"Преподаватели","Абонементы", "Расписание","Отзывы","Пробное занятие","Контакты","Вернуться"];   
-        //this.widthWindow = window.innerWidth;
-        //this.shouldComponentUpdate();
     };
     
     state = {
@@ -37,7 +32,6 @@ export default class Main extends React.Component {
     clickToArrow() {
         const perem = window;
         perem.addEventListener('keydown',() => {
-            console.log(this.state);
             if (perem.event.keyCode === 40) {
                 if (this.state.numberSl === 8) {
                     return;
@@ -59,7 +53,6 @@ export default class Main extends React.Component {
                 currentPage:this.presentation[this.state.numberSl],
                 nameSlides:this.arrNamesOfSlides[this.state.numberSl]
             });
-            console.log(this.state);
         });
     };
     burgerMenuButton() {
@@ -81,7 +74,7 @@ export default class Main extends React.Component {
         const burgerMenu = document.querySelector('.nav-menu-list');
         burgerMenu.classList.toggle('hide');
 
-        let clickedItemMenu = window.event.path[0].id;
+        let clickedItemMenu = window.event.target.id;
 
         if (clickedItemMenu === arrOfvalue[0]) {
             this.setState({
@@ -225,19 +218,12 @@ export default class Main extends React.Component {
                 {this.mobileRenderBottom()}
             </div>)
         } else {
-            
             return this.renderForFullScreen();
         }
     };
-    /*
-    shouldComponentUpdate() {
-        console.log('teee');
-        return true;
-    };*/
-    blabla = () => {
-        console.log(window.innerWidth,'resize',this.state);
+    setWindowSize = () => {
+
         window.addEventListener('resize',() => {
-            console.log(window.innerWidth,'resize',this.state);
             this.setState({widthWindow: window.innerWidth});
         });
     };
@@ -245,7 +231,6 @@ export default class Main extends React.Component {
     componentDidMount() {
         this.burgerMenuButton();
         this.clickToArrow();
-        this.blabla();
-        //this.shouldComponentUpdate();
+        this.setWindowSize();
     };
 };
